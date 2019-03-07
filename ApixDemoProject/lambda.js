@@ -23,6 +23,9 @@ exports.handler = function (event, context, callback) {
             headers: { "X-Authorization": access_token, "Accept": "*/*" }
         }).then((response) => {
             // your code goes here
+            var jsonData = JSON.stringify(response.body);
+            //var firstBank = ;
+            console.log(jsonData);
         }).catch((err) => {
             // error handling goes here
         });
